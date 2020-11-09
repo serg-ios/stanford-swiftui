@@ -10,8 +10,14 @@ import Foundation
 struct MemoryGame<CardContent> {
     var cards: [Card]
 
-    func choose(card: Card) {
-        print("card chosen \(card)")
+    mutating func choose(card: Card) {
+        let chosenIndex: Int = self.index(of: card)
+        let wasFaceUp = cards[chosenIndex].isFaceUp
+        cards[chosenIndex].isFaceUp = !wasFaceUp
+    }
+
+    func index(of card: Card) -> Int {
+        cards.enumerated().first(where: { $0.element.id == card.id })?.offset ?? 0 // TODO: bogus!
     }
 
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
