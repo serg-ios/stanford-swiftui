@@ -1,0 +1,32 @@
+//
+//  EmojiMemoryGame.swift
+//  Memorize
+//
+//  Created by Sergio Rodríguez Rama on 09/11/2020.
+//
+
+import Foundation
+
+class EmojiMemoryGame {
+    private(set) var model: MemoryGame<String> = createMemoryGame()
+
+    static func createMemoryGame() -> MemoryGame<String> {
+        let emojis: [String] = ["🎃", "👻", "🕷"]
+        return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in
+            return emojis[pairIndex]
+        }
+    }
+
+    // MARK: - Access to the Model
+
+    var cards: [MemoryGame<String>.Card] {
+        model.cards
+    }
+
+
+    // MARK: - Intent(s)
+
+    func choose(card: MemoryGame<String>.Card) {
+        model.choose(card: card)
+    }
+}
