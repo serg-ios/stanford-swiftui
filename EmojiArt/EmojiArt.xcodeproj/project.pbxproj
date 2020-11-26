@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7993C067256E6A0A0098D26E /* OptionalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C066256E6A0A0098D26E /* OptionalImage.swift */; };
+		7993C06B256E6C980098D26E /* AnimatableSystemFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993C06A256E6C980098D26E /* AnimatableSystemFontModifier.swift */; };
 		79A6837F25657632006D7B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6837E25657632006D7B24 /* AppDelegate.swift */; };
 		79A6838125657632006D7B24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6838025657632006D7B24 /* SceneDelegate.swift */; };
 		79A6838325657632006D7B24 /* EmojiArtDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A6838225657632006D7B24 /* EmojiArtDocumentView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7993C066256E6A0A0098D26E /* OptionalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalImage.swift; sourceTree = "<group>"; };
+		7993C06A256E6C980098D26E /* AnimatableSystemFontModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableSystemFontModifier.swift; sourceTree = "<group>"; };
 		79A6837B25657632006D7B24 /* EmojiArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A6837E25657632006D7B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A6838025657632006D7B24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +66,11 @@
 		79A6837D25657632006D7B24 /* EmojiArt */ = {
 			isa = PBXGroup;
 			children = (
+				7993C066256E6A0A0098D26E /* OptionalImage.swift */,
 				79A6837E25657632006D7B24 /* AppDelegate.swift */,
 				79A6838025657632006D7B24 /* SceneDelegate.swift */,
 				79A6838225657632006D7B24 /* EmojiArtDocumentView.swift */,
+				7993C06A256E6C980098D26E /* AnimatableSystemFontModifier.swift */,
 				79FB47F6256680E3008D0E39 /* EmojiArtExtensions.swift */,
 				79FB47F325667D21008D0E39 /* EmojiArt.swift */,
 				79A683932565766C006D7B24 /* EmojiArtDocument.swift */,
@@ -159,6 +165,8 @@
 				79FB47F7256680E3008D0E39 /* EmojiArtExtensions.swift in Sources */,
 				79FB47F425667D21008D0E39 /* EmojiArt.swift in Sources */,
 				79A6838325657632006D7B24 /* EmojiArtDocumentView.swift in Sources */,
+				7993C067256E6A0A0098D26E /* OptionalImage.swift in Sources */,
+				7993C06B256E6C980098D26E /* AnimatableSystemFontModifier.swift in Sources */,
 				79A683942565766C006D7B24 /* EmojiArtDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +311,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = EmojiArt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +333,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = EmojiArt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -11,11 +11,22 @@ import Foundation
 class EmojiArtDocument: ObservableObject {
     static let palette: String = "😀😃😄😁😆😅😂🤣☺️😊😇🙂🙃😉😌😍"
 
-    @Published private var emojiArt: EmojiArt = EmojiArt()
+    @Published private var emojiArt: EmojiArt = EmojiArt() {
+        didSet {
+            UserDefaults.standard.setValue(emojiArt.json, forKey: EmojiArtDocument.untitled)
+        }
+    }
 
     @Published private(set) var backgroundImage: UIImage?
 
     var emojis: [EmojiArt.Emoji] { emojiArt.emojis }
+
+    private static let untitled = "EmojiArtDocument.Untitled"
+
+    init() {
+        emojiArt = EmojiArt(json: UserDefaults.standard.data(forKey: EmojiArtDocument.untitled)) ?? EmojiArt()
+        fetchBackgroundImageData()
+    }
 
     // MARK: - Intent(s)
 
